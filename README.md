@@ -3,6 +3,7 @@
 get-instance-list.py
 
 Usage:
+
 	python get-instance-list.py <region-name>
 
 Default region is us-east-1
