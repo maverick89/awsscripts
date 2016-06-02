@@ -29,21 +29,24 @@ except botocore.exceptions.EndpointConnectionError:
 
 instanceList = []
 for instance in instances:
-	templist = [instance.id, instance.instance_type, instance.tags, instance.private_ip_address, instance.public_ip_address, instance.key_name]
+	templist = [instance.id, instance.instance_type, instance.tags, instance.private_ip_address, instance.public_ip_address, instance.key_name, instance.state]
 	instanceList.append(templist)
+
 
 lengthOfList = len(instanceList)
 
 print "Total Number of Instances: " + str(lengthOfList);
 
-print '\033[1m' + " ======================================================================================================================================"
-print "| " + '{:22}'.format("Instance Id")+"| "+'{:30}'.format("Name")+"| "+'{:18}'.format("Public IP")+"| "+'{:18}'.format("Private IP")+"| "+'{:15}'.format("Instance Type")+"| "+'{:20}'.format("Key Name")+"|"
-print " ======================================================================================================================================" + '\033[0m'
+print '\033[1m' + " ====================================================================================================================================================="
+print "| " + '{:22}'.format("Instance Id")+"| "+'{:26}'.format("Name")+"| "+'{:16}'.format("Instance State")+" | "+'{:18}'.format("Public IP")+"| "+'{:18}'.format("Private IP")+"| "+'{:15}'.format("Instance Type")+"| "+'{:20}'.format("Key Name")+"|"
+print " =====================================================================================================================================================" + '\033[0m'
 
 for x in range(0,len(instanceList)):
-        index = next(index for (index, d) in enumerate(instanceList[x][2]) if d["Key"] == "Name")
-	print "| " + '{:22}'.format(instanceList[x][0]) + "| "+'{:30}'.format(instanceList[x][2][index]["Value"])+"| " +'{:18}'.format(instanceList[x][4])+"| "+'{:18}'.format(instanceList[x][3])+"| "+'{:15}'.format(instanceList[x][1])+"| "+'{:20}'.format(instanceList[x][5])+"|"
+	#print instanceList[x][6]["Name"]
+	index = next(index for (index, d) in enumerate(instanceList[x][2]) if d["Key"] == "Name")
 
-print '\033[1m' + " ======================================================================================================================================"
+	print "| " + '{:22}'.format(instanceList[x][0]) + "| "+'{:26}'.format(instanceList[x][2][index]["Value"])+"| " +'{:16}'.format(instanceList[x][6]["Name"])+" | " +'{:18}'.format(instanceList[x][4])+"| "+'{:18}'.format(instanceList[x][3])+"| "+'{:15}'.format(instanceList[x][1])+"| "+'{:20}'.format(instanceList[x][5])+"|"
+
+print '\033[1m' + " ====================================================================================================================================================="
 print '\033[0m'
 
