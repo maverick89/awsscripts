@@ -9,4 +9,4 @@ listOfKeys = [{"region":"us-east-1","fileName":"us-east-1-key.pem"},
 			{"region":"ap-southeast-1","fileName":"ap-southeast-1-key.pem"},
 			{"region":"ap-southeast-2","fileName":"ap-southeast-2-key.pem"},
 			{"region":"ap-northeast-1","fileName":"ap-northeast-1-key.pem"},
-			{"region":"ap=northeast-2","fileName":"ap=northeast-2-key.pem"}]
+			{"region":"ap-northeast-2","fileName":"ap-northeast-2-key.pem"}]
