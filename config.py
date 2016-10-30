@@ -1,4 +1,4 @@
-baseDir = "/Users/truptesh/Documents/Truptesh/Keys/"
+baseDir = "~/.ssh/"
 
 listOfKeys = [{"region":"us-east-1","fileName":"us-east-1-key.pem"}, 
 			{"region":"us-west-1","fileName":"us-west-1-key.pem"},
@@ -9,4 +9,6 @@ listOfKeys = [{"region":"us-east-1","fileName":"us-east-1-key.pem"},
 			{"region":"ap-southeast-1","fileName":"ap-southeast-1-key.pem"},
 			{"region":"ap-southeast-2","fileName":"ap-southeast-2-key.pem"},
 			{"region":"ap-northeast-1","fileName":"ap-northeast-1-key.pem"},
-			{"region":"ap-northeast-2","fileName":"ap-northeast-2-key.pem"}]
+			{"region":"ap-northeast-2","fileName":"ap-northeast-2-key.pem"},
+			{"region":"ap-south-1","fileName":"ap-south-1-key.pem"},
+			{"region":"us-east-2","fileName":"us-east-2-key.pem"}]
