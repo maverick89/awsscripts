@@ -1,11 +1,12 @@
-#####################################################################################
-# Description: Script to create High CPU Utilization alarm for all running instances.
+###################################################################
+# Description: Script to create High CPU Utilization alarm for all 
+#			   running instances in a VPC.
 #
 # Author: Truptesh 
 #
 # Date: 05/09/2017
 #
-#####################################################################################
+###################################################################
 
 import boto3
 
@@ -14,6 +15,7 @@ cwclient = boto3.client('cloudwatch')
 
 instance_id_list = []
 
+vpcId = vpc-463a3523;
 highCPUAlarm_Threshold = 70.0;
 highCPUAlarm_period = 300;
 highCPUAlarm_evaluationPeriod = 2;
@@ -23,7 +25,7 @@ ec2response = ec2client.describe_instances(
         {
             'Name': 'vpc-id',
             'Values': [
-                'vpc-463a3523',
+                vpcId,
             ]
         },
     ]
